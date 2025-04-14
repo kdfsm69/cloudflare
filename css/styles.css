@@ -13,17 +13,28 @@
     src: url('../fonts/CormorantGaramond-Regular.ttf') format('truetype');
 }
 
-
-/* Base styles */
+html,
 body {
+    height: 100%;
     margin: 0;
     padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
     font-family: 'Libre Baskerville', serif;
     background-color: #faf9f6;
     color: #1a1a1a;
 }
 
-/* Navbar styles */
+
+.page-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -46,7 +57,6 @@ body {
 
 .logo-img {
     height: 36px;
-    /* Adjust as needed for scale */
     width: auto;
 }
 
@@ -73,7 +83,6 @@ body {
     transition: all 0.4s ease;
 }
 
-/* Position bars normally */
 .burger .bar:nth-child(1) {
     top: 10px;
 }
@@ -86,7 +95,6 @@ body {
     top: 26px;
 }
 
-/* Transform into 'X' */
 .burger.open .bar:nth-child(1) {
     transform: rotate(45deg);
     top: 18px;
@@ -101,7 +109,6 @@ body {
     top: 18px;
 }
 
-/* Dropdown Menu (hidden by default) */
 .dropdown-menu {
     display: flex;
     justify-content: space-around;
@@ -116,11 +123,9 @@ body {
 
 .dropdown-menu.active {
     max-height: 500px;
-    /* Adjust height as needed */
     padding: 2rem 3rem;
 }
 
-/* Menu Section Styling */
 .menu-section {
     display: flex;
     flex-direction: column;
@@ -149,8 +154,6 @@ body {
     font-family: 'Cormorant Garamond', serif;
 }
 
-
-/* Underline animation */
 .menu-section a::after {
     content: '';
     position: absolute;
@@ -170,17 +173,49 @@ body {
     width: 100%;
 }
 
-/* Default transparent style */
 .navbar {
     background-color: transparent;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Solid style when scrolled or active */
 .navbar.scrolled,
 .navbar.menu-open {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.footer {
+    margin-top: auto;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    padding: 0.5rem 2rem;
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+    color: #1a1a1a;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer p{
+    color: #868992;
+    font-size: 0.7rem;
+}
+
+.footer .social-icons a {
+    margin: 0 0.5rem;
+    color: #1a1a1a;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    color: #7d5a4f;
 }
 
 @media (max-width: 600px) {
