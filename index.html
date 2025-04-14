@@ -3,21 +3,71 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Firenzi</title>
+  <title>Firenze</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
-  <header class="navbar">
-    <div class="logo">Firenzi</div>
-    <nav>
-      <ul class="nav-menu">
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Sustainability</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header class="navbar">
+        <div class="logo">
+            <img src="images/Nav Logo.png" alt="Firenze Logo" class="logo-img" />
+            <span class="logo-text">Firenze</span>
+        </div>
+        <button class="burger" id="burger">&#9776;</button>
+      </header>
+      
+      <nav class="dropdown-menu" id="navMenu">
+        <div class="menu-section">
+          <h4>ABOUT</h4>
+          <a href="#">Overview</a>
+          <a href="#">Madagascar</a>
+          <a href="#">Factories</a>
+          <a href="#">Our Employees</a>
+        </div>
+        <div class="menu-section">
+          <h4>PRODUCTION</h4>
+          <a href="#">Products</a>
+          <a href="#">Quality Control</a>
+          <a href="#">Technology</a>
+        </div>
+        <div class="menu-section">
+          <h4>SUSTAINABILITY</h4>
+          <a href="#">Environment</a>
+          <a href="#">Health and Safety</a>
+          <a href="#">Social Projects</a>
+          <a href="#">Certifications</a>
+        </div>
+        <div class="menu-section">
+          <h4>CONTACT</h4>
+          <a href="#">Contact</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Imprint</a>
+          <a href="#">Media</a>
+        </div>
+      </nav>
+
+      <script>
+        const burger = document.getElementById('burger');
+        const navMenu = document.getElementById('navMenu');
+        const navbar = document.querySelector('.navbar');
+      
+        // Toggle menu open/close
+        burger.addEventListener('click', () => {
+          navMenu.classList.toggle('active');
+          navbar.classList.toggle('menu-open');
+        });
+      
+        // Change navbar style on scroll
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 10) {
+            navbar.classList.add('scrolled');
+          } else {
+            navbar.classList.remove('scrolled');
+          }
+        });
+      </script>
+      
+      
 
 </body>
 </html>
