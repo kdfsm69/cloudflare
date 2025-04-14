@@ -36,14 +36,18 @@ body {
 }
 
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 3rem;
-    border-bottom: 1px solid #ddd;
-    background-color: #fff;
-    position: relative;
-    z-index: 2;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    box-shadow: none;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .logo {
@@ -61,9 +65,11 @@ body {
 }
 
 .logo-text {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    font-weight: 500;
+    color: white;
+    line-height: 1;
 }
-
 .burger {
     position: relative;
     width: 40px;
@@ -79,7 +85,7 @@ body {
     left: 6px;
     right: 6px;
     height: 2px;
-    background-color: #1a1a1a;
+    background-color: white;
     transition: all 0.4s ease;
 }
 
@@ -110,20 +116,27 @@ body {
 }
 
 .dropdown-menu {
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    background-color: #ffffff;
-    border-top: 1px solid #ddd;
+    background-color: #faf9f6;
+    border-top: none;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
     padding: 0 3rem;
+    z-index: 999;
 }
+
 
 .dropdown-menu.active {
     max-height: 500px;
-    padding: 2rem 3rem;
+    padding: 6rem 3rem 2rem;
+    border-top: 1px solid #ddd;
 }
 
 .menu-section {
@@ -173,20 +186,25 @@ body {
     width: 100%;
 }
 
-.navbar {
-    background-color: transparent;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
 .navbar.scrolled,
 .navbar.menu-open {
-    background-color: #fff;
+    background-color: #faf9f6;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.navbar.scrolled .logo-text,
+.navbar.menu-open .logo-text {
+    color: #1a1a1a;
+}
+
+.navbar.scrolled .burger .bar,
+.navbar.menu-open .burger .bar {
+    background-color: #1a1a1a;
 }
 
 .footer {
     margin-top: auto;
-    background-color: #fff;
+    background-color: #faf9f6;
     border-top: 1px solid #ddd;
     padding: 0.5rem 2rem;
     font-family: 'Libre Baskerville', serif;
@@ -218,6 +236,73 @@ body {
     color: #7d5a4f;
 }
 
+.hero {
+    position: relative;
+    height: 100vh;
+    background-image: url('../images/home_renaissance.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.typewriter {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 2px solid white;
+    white-space: nowrap;
+    animation: typing 3s steps(18), blink 0.75s step-end infinite;
+    font-size: 4rem;
+    letter-spacing: 2px;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 18ch; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 3rem;
+        letter-spacing: 1px;
+    }
+
+    .typewriter {
+        font-size: 3rem;
+        letter-spacing: 1px;
+    }
+}
+
 @media (max-width: 600px) {
     .logo-img {
         height: 28px;
@@ -225,5 +310,28 @@ body {
 
     .logo-text {
         font-size: 1.4rem;
+    }
+
+    .navbar {
+        padding: 1rem;
+    }
+
+    .logo-text {
+        font-size: 1.2rem;
+    }
+
+    .burger {
+        width: 32px;
+        height: 32px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+        letter-spacing: 0.5px;
+    }
+
+    .typewriter {
+        font-size: 2rem;
+        letter-spacing: 0.5px;
     }
 }
