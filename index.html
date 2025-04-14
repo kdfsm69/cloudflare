@@ -13,7 +13,11 @@
             <img src="images/Nav Logo.png" alt="Firenze Logo" class="logo-img" />
             <span class="logo-text">Firenze</span>
         </div>
-        <button class="burger" id="burger">&#9776;</button>
+        <button class="burger" id="burger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
       </header>
       
       <nav class="dropdown-menu" id="navMenu">
@@ -51,10 +55,10 @@
         const navMenu = document.getElementById('navMenu');
         const navbar = document.querySelector('.navbar');
       
-        // Toggle menu open/close
         burger.addEventListener('click', () => {
-          navMenu.classList.toggle('active');
-          navbar.classList.toggle('menu-open');
+            navMenu.classList.toggle('active');
+            navbar.classList.toggle('menu-open');
+            burger.classList.toggle('open');
         });
       
         // Change navbar style on scroll

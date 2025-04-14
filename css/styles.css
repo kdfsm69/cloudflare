@@ -45,7 +45,8 @@ body {
 }
 
 .logo-img {
-    height: 36px; /* Adjust as needed for scale */
+    height: 36px;
+    /* Adjust as needed for scale */
     width: auto;
 }
 
@@ -53,13 +54,51 @@ body {
     font-size: 1.8rem;
 }
 
-/* Burger Icon (always visible) */
 .burger {
-    font-size: 1.8rem;
+    position: relative;
+    width: 40px;
+    height: 40px;
     background: none;
     border: none;
     cursor: pointer;
     z-index: 3;
+}
+
+.burger .bar {
+    position: absolute;
+    left: 6px;
+    right: 6px;
+    height: 2px;
+    background-color: #1a1a1a;
+    transition: all 0.4s ease;
+}
+
+/* Position bars normally */
+.burger .bar:nth-child(1) {
+    top: 10px;
+}
+
+.burger .bar:nth-child(2) {
+    top: 18px;
+}
+
+.burger .bar:nth-child(3) {
+    top: 26px;
+}
+
+/* Transform into 'X' */
+.burger.open .bar:nth-child(1) {
+    transform: rotate(45deg);
+    top: 18px;
+}
+
+.burger.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.open .bar:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 18px;
 }
 
 /* Dropdown Menu (hidden by default) */
@@ -76,7 +115,8 @@ body {
 }
 
 .dropdown-menu.active {
-    max-height: 500px; /* Adjust height as needed */
+    max-height: 500px;
+    /* Adjust height as needed */
     padding: 2rem 3rem;
 }
 
