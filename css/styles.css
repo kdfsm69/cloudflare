@@ -301,6 +301,10 @@ body {
         font-size: 3rem;
         letter-spacing: 1px;
     }
+
+    .dropdown-menu {
+        top: 56px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -333,5 +337,10 @@ body {
     .typewriter {
         font-size: 2rem;
         letter-spacing: 0.5px;
+    }
+
+    .dropdown-menu {
+        top: 56px;
+        padding: 0 1rem;
     }
 }
