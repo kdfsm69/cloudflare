@@ -25,31 +25,39 @@
 
         <nav class="dropdown-menu" id="navMenu">
             <div class="menu-section">
-                <h4>ABOUT</h4>
-                <a href="#">Overview</a>
-                <a href="#">Madagascar</a>
-                <a href="#">Factories</a>
-                <a href="#">Our Employees</a>
+                <div>
+                    <h4>ABOUT</h4>
+                    <a href="#">Overview</a>
+                    <a href="#">Madagascar</a>
+                    <a href="#">Factories</a>
+                    <a href="#">Our Employees</a>
+                </div>
             </div>
             <div class="menu-section">
-                <h4>PRODUCTION</h4>
-                <a href="#">Products</a>
-                <a href="#">Quality Control</a>
-                <a href="#">Technology</a>
+                <div>
+                    <h4>PRODUCTION</h4>
+                    <a href="#">Products</a>
+                    <a href="#">Quality Control</a>
+                    <a href="#">Technology</a>
+                </div>
             </div>
             <div class="menu-section">
-                <h4>SUSTAINABILITY</h4>
-                <a href="#">Environment</a>
-                <a href="#">Health and Safety</a>
-                <a href="#">Social Projects</a>
-                <a href="#">Certifications</a>
+                <div>
+                    <h4>SUSTAINABILITY</h4>
+                    <a href="#">Environment</a>
+                    <a href="#">Health and Safety</a>
+                    <a href="#">Social Projects</a>
+                    <a href="#">Certifications</a>
+                </div>
             </div>
             <div class="menu-section">
-                <h4>CONTACT</h4>
-                <a href="#">Contact</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Imprint</a>
-                <a href="#">Media</a>
+                <div>
+                    <h4>CONTACT</h4>
+                    <a href="#">Contact</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Imprint</a>
+                    <a href="#">Media</a>
+                </div>
             </div>
         </nav>
 
@@ -72,25 +80,7 @@
         </div>
     </footer>
 
-    <script>
-        const burger = document.getElementById('burger');
-        const navMenu = document.getElementById('navMenu');
-        const navbar = document.querySelector('.navbar');
-
-        burger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            navbar.classList.toggle('menu-open');
-            burger.classList.toggle('open');
-        });
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 10) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-    </script>
+    <script src="js/script.js"></script>
 
 </body>
 
