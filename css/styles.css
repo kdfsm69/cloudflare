@@ -50,6 +50,11 @@ body {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+.home-link {
+    cursor: pointer;
+    text-decoration: none;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -311,6 +316,52 @@ body {
     letter-spacing: 2px;
 }
 
+.about-hero {
+    position: relative;
+    height: 50vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.about-hero-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.about-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.about-content {
+    padding: 4rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.about-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4a4a4a;
+    font-family: 'Libre Baskerville', serif;
+}
+
+
 @keyframes typing {
     from {
         width: 0;
@@ -348,11 +399,15 @@ body {
     }
 
     .menu-section {
-        width: 100%;
         margin-bottom: 2rem;
+        width: 100%;
+        max-width: 100%;
+        flex: 1 1 100%;
+        margin-left: 0;
+        padding: 0;
     }
 
-    .menu-section div {
+    .menu-link {
         width: 100%;
     }
 
@@ -418,11 +473,15 @@ body {
     }
 
     .menu-section {
-        width: 100%;
         margin-bottom: 2rem;
+        width: 100%;
+        max-width: 100%;
+        flex: 1 1 100%;
+        margin-left: 0;
+        padding: 0;
     }
 
-    .menu-section div {
+    .menu-link {
         width: 100%;
     }
 
