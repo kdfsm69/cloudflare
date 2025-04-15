@@ -423,6 +423,15 @@ body {
         border-bottom: 1px solid #eee;
         padding-bottom: 1rem;
     }
+
+    .about-content h1 {
+        font-size: 2rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
 }
 
 @media (max-width: 600px) {
@@ -496,5 +505,14 @@ body {
     .menu-section:not(:last-child) {
         border-bottom: 1px solid #eee;
         padding-bottom: 1rem;
+    }
+
+    .about-content h1 {
+        font-size: 2rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+        padding: 0 1rem;
     }
 }
