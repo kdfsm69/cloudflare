@@ -623,6 +623,26 @@ body {
         font-size: 1rem;
         padding: 0 1rem;
     }
+
+    .contact-hero {
+        height: 60vh;
+    }
+
+    .contact-hero-img {
+        object-position: center;
+    }
+
+    .contact-form-section {
+        padding: 3rem 1.5rem;
+    }
+
+    .contact-form-section h1 {
+        font-size: 2rem;
+    }
+
+    .form-intro {
+        font-size: 0.95rem;
+    }
 }
 
 @media (max-width: 600px) {
@@ -705,5 +725,28 @@ body {
     .about-content p {
         font-size: 1rem;
         padding: 0 1rem;
+    }
+
+    .contact-hero {
+        height: 50vh;
+    }
+
+    .contact-form-section h1 {
+        font-size: 1.75rem;
+    }
+
+    .contact-form {
+        gap: 1rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.95rem;
+        padding: 0.7rem 0.9rem;
+    }
+
+    .submit-btn {
+        font-size: 0.95rem;
+        padding: 0.6rem 1.5rem;
     }
 }
