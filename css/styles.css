@@ -70,6 +70,15 @@ body {
     color: white;
     line-height: 1;
 }
+
+.logo-mg-text {
+    color: white;
+    background-color: #014F30;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    padding: 5px;
+}
+
 .burger {
     position: relative;
     width: 40px;
@@ -142,13 +151,27 @@ body {
 }
 
 .menu-section {
+    flex: 1 1 0;
+    max-width: 25%;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    margin: 1rem 0;
+    align-items: center;
+    min-width: 0;
+    padding: 0 1.2rem;
 }
 
+.menu-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+}
 
 .menu-section h4 {
+    position: relative;
     font-size: 1rem;
     font-weight: bold;
     letter-spacing: 1px;
@@ -156,20 +179,13 @@ body {
     border-bottom: 2px solid #ccc;
     padding-bottom: 0.2rem;
     font-family: 'Libre Baskerville', serif;
-}
-
-.menu-section a {
-    display: block;
-    position: relative;
-    margin: 0.4rem 0;
-    font-size: 0.95rem;
-    color: #333;
     text-decoration: none;
     transition: color 0.3s ease;
     font-family: 'Cormorant Garamond', serif;
+    cursor: pointer;
 }
 
-.menu-section a::after {
+.menu-section h4::after {
     content: '';
     position: absolute;
     left: 0;
@@ -180,11 +196,11 @@ body {
     transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.menu-section a:hover {
+.menu-section h4:hover {
     color: #7d5a4f;
 }
 
-.menu-section a:hover::after {
+.menu-section h4:hover::after {
     width: 100%;
 }
 
@@ -202,6 +218,16 @@ body {
 .navbar.scrolled .burger .bar,
 .navbar.menu-open .burger .bar {
     background-color: #1a1a1a;
+}
+
+.menu-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
 .footer {
@@ -222,7 +248,7 @@ body {
     gap: 1rem;
 }
 
-.footer p{
+.footer p {
     color: #868992;
     font-size: 0.7rem;
 }
@@ -286,12 +312,19 @@ body {
 }
 
 @keyframes typing {
-    from { width: 0; }
-    to { width: 18ch; }
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 18ch;
+    }
 }
 
 @keyframes blink {
-    50% { border-color: transparent; }
+    50% {
+        border-color: transparent;
+    }
 }
 
 @media (max-width: 768px) {
@@ -344,6 +377,12 @@ body {
 
     .logo-text {
         font-size: 1.4rem;
+    }
+
+    .logo-mg-text {
+        font-size: 1rem;
+        border-radius: 3px;
+        padding: 3px;
     }
 
     .navbar {
