@@ -534,6 +534,7 @@ body {
     font-size: 1rem;
     font-family: inherit;
     background-color: #fff;
+    box-sizing: border-box;
 }
 
 .submit-btn {
@@ -546,6 +547,7 @@ body {
     font-family: 'Playfair Display', serif;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 100%;
 }
 
 .submit-btn:hover {
