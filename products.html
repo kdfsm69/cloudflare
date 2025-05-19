@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Firenze Products</title>
-  <link rel="stylesheet" href="css/styles.css?v=1.6.7" />
+  <link rel="stylesheet" href="css/styles.css?v=1.6.8" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
@@ -63,54 +63,69 @@
       <p>Explore our range of knitted garments and accessories — built for quality, comfort, and customization.</p>
     </div>
 
-    <div class="product-carousel-container">
-      <div class="product-carousel" id="productCarousel">
-        <div class="carousel-item">
-          <img src="images/mens-knitwear.jpg" alt="Pullovers & Sweaters" class="carousel-img" />
-          <div class="carousel-caption">
-            <h3>Pullovers & Sweaters</h3>
-            <p>Light to heavyweight, across all gauges. Crewneck, V-neck, turtleneck available.</p>
-          </div>
+    <!-- Products Alternating Sections -->
+    <section class="products-alt-section">
+      <div class="product-alt-row left-align">
+        <div class="product-alt-img">
+          <img src="images/mens-knitwear.jpg" alt="Pullovers & Sweaters" />
         </div>
-        <div class="carousel-item">
-          <img src="images/cardigans.jpg" alt="Cardigans & Tops" class="carousel-img" />
-          <div class="carousel-caption">
-            <h3>Cardigans & Tops</h3>
-            <p>Men’s and women’s flat-knit cardigans and tops, featuring optional closures and trims.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="images/womens-knitwear.jpg" alt="Dresses & Bottoms" class="carousel-img" />
-          <div class="carousel-caption">
-            <h3>Dresses & Bottoms</h3>
-            <p>Custom silhouettes, full-fashioned finishing.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="images/beanie.jpg" alt="Knit Accessories" class="carousel-img" />
-          <div class="carousel-caption">
-            <h3>Knit Accessories</h3>
-            <p>Scarves, beanies, mittens, headbands — fully customizable.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="images/kids-knitwear.jpg" alt="Kidswear" class="carousel-img" />
-          <div class="carousel-caption">
-            <h3>Kidswear</h3>
-            <p>Soft and skin-safe options tailored for children's knit garments.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="images/Production.jpg" alt="Custom Development" class="carousel-img" />
-          <div class="carousel-caption">
-            <h3>Custom Development</h3>
-            <p>Bring your design — we’ll knit your idea to life.</p>
-          </div>
+        <div class="product-alt-text">
+          <h2>Pullovers & Sweaters</h2>
+          <p>Light to heavyweight, across all gauges. Crewneck, V-neck, turtleneck available.</p>
+          <button class="product-view-btn" data-modal="modal-pullovers">View</button>
         </div>
       </div>
-      <button class="carousel-btn prev" id="carouselPrev"><i class="fas fa-chevron-left"></i></button>
-      <button class="carousel-btn next" id="carouselNext"><i class="fas fa-chevron-right"></i></button>
-    </div>
+      <div class="product-alt-row right-align">
+        <div class="product-alt-text">
+          <h2>Cardigans & Tops</h2>
+          <p>Men’s and women’s flat-knit cardigans and tops, featuring optional closures and trims.</p>
+          <button class="product-view-btn" data-modal="modal-cardigans">View</button>
+        </div>
+        <div class="product-alt-img">
+          <img src="images/cardigans.jpg" alt="Cardigans & Tops" />
+        </div>
+      </div>
+      <div class="product-alt-row left-align">
+        <div class="product-alt-img">
+          <img src="images/womens-knitwear.jpg" alt="Dresses & Bottoms" />
+        </div>
+        <div class="product-alt-text">
+          <h2>Dresses & Bottoms</h2>
+          <p>Custom silhouettes, full-fashioned finishing.</p>
+          <button class="product-view-btn" data-modal="modal-dresses">View</button>
+        </div>
+      </div>
+      <div class="product-alt-row right-align">
+        <div class="product-alt-text">
+          <h2>Knit Accessories</h2>
+          <p>Scarves, beanies, mittens, headbands — fully customizable.</p>
+          <button class="product-view-btn" data-modal="modal-accessories">View</button>
+        </div>
+        <div class="product-alt-img">
+          <img src="images/beanie.jpg" alt="Knit Accessories" />
+        </div>
+      </div>
+      <div class="product-alt-row left-align">
+        <div class="product-alt-img">
+          <img src="images/kids-knitwear.jpg" alt="Kidswear" />
+        </div>
+        <div class="product-alt-text">
+          <h2>Kidswear</h2>
+          <p>Soft and skin-safe options tailored for children's knit garments.</p>
+          <button class="product-view-btn" data-modal="modal-kidswear">View</button>
+        </div>
+      </div>
+      <div class="product-alt-row right-align">
+        <div class="product-alt-text">
+          <h2>Custom Development</h2>
+          <p>Bring your design — we’ll knit your idea to life.</p>
+          <button class="product-view-btn" data-modal="modal-custom">View</button>
+        </div>
+        <div class="product-alt-img">
+          <img src="images/Production.jpg" alt="Custom Development" />
+        </div>
+      </div>
+    </section>
 
     <footer class="footer">
       <div class="footer-content">
@@ -124,7 +139,81 @@
     </footer>
   </div>
 
-  <script src="js/script.js?v=1.6.7"></script>
+  <!-- Product Modals -->
+  <div id="modal-pullovers" class="product-modal">
+    <div class="product-modal-content">
+      <span class="product-modal-close">&times;</span>
+      <div class="modal-carousel" data-index="0">
+        <button class="modal-carousel-prev" aria-label="Previous">&#8592;</button>
+        <div class="modal-carousel-slide">Pullovers: Lightweight Merino</div>
+        <div class="modal-carousel-slide">Pullovers: Heavyweight Lambswool</div>
+        <div class="modal-carousel-slide">Pullovers: Cotton Blend</div>
+        <button class="modal-carousel-next" aria-label="Next">&#8594;</button>
+      </div>
+    </div>
+  </div>
+  <div id="modal-cardigans" class="product-modal">
+    <div class="product-modal-content">
+      <span class="product-modal-close">&times;</span>
+      <div class="modal-carousel" data-index="0">
+        <button class="modal-carousel-prev" aria-label="Previous">&#8592;</button>
+        <div class="modal-carousel-slide">Cardigans: Classic Button-Up</div>
+        <div class="modal-carousel-slide">Cardigans: Open Front</div>
+        <div class="modal-carousel-slide">Cardigans: Cropped Styles</div>
+        <button class="modal-carousel-next" aria-label="Next">&#8594;</button>
+      </div>
+    </div>
+  </div>
+  <div id="modal-dresses" class="product-modal">
+    <div class="product-modal-content">
+      <span class="product-modal-close">&times;</span>
+      <div class="modal-carousel" data-index="0">
+        <button class="modal-carousel-prev" aria-label="Previous">&#8592;</button>
+        <div class="modal-carousel-slide">Dresses: Midi Knit Dress</div>
+        <div class="modal-carousel-slide">Dresses: Ribbed Dress</div>
+        <div class="modal-carousel-slide">Dresses: Sweater Dress</div>
+        <button class="modal-carousel-next" aria-label="Next">&#8594;</button>
+      </div>
+    </div>
+  </div>
+  <div id="modal-accessories" class="product-modal">
+    <div class="product-modal-content">
+      <span class="product-modal-close">&times;</span>
+      <div class="modal-carousel" data-index="0">
+        <button class="modal-carousel-prev" aria-label="Previous">&#8592;</button>
+        <div class="modal-carousel-slide">Accessories: Beanies</div>
+        <div class="modal-carousel-slide">Accessories: Scarves</div>
+        <div class="modal-carousel-slide">Accessories: Mittens</div>
+        <button class="modal-carousel-next" aria-label="Next">&#8594;</button>
+      </div>
+    </div>
+  </div>
+  <div id="modal-kidswear" class="product-modal">
+    <div class="product-modal-content">
+      <span class="product-modal-close">&times;</span>
+      <div class="modal-carousel" data-index="0">
+        <button class="modal-carousel-prev" aria-label="Previous">&#8592;</button>
+        <div class="modal-carousel-slide">Kidswear: Soft Cotton Pullover</div>
+        <div class="modal-carousel-slide">Kidswear: Playful Cardigan</div>
+        <div class="modal-carousel-slide">Kidswear: Cozy Knit Set</div>
+        <button class="modal-carousel-next" aria-label="Next">&#8594;</button>
+      </div>
+    </div>
+  </div>
+  <div id="modal-custom" class="product-modal">
+    <div class="product-modal-content">
+      <span class="product-modal-close">&times;</span>
+      <div class="modal-carousel" data-index="0">
+        <button class="modal-carousel-prev" aria-label="Previous">&#8592;</button>
+        <div class="modal-carousel-slide">Custom: Your Design Here</div>
+        <div class="modal-carousel-slide">Custom: Prototype Development</div>
+        <div class="modal-carousel-slide">Custom: Sample Production</div>
+        <button class="modal-carousel-next" aria-label="Next">&#8594;</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js?v=1.6.8"></script>
 </body>
 
 </html>
