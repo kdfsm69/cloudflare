@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainability | Firenze Knitwear</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Libre+Baskerville&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css?v=1.6.7" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <a href="index.html" class="home-link">
+        <div class="logo">
+          <img src="images/logo-alt.png" alt="Firenze Logo" class="logo-img" />
+          <span class="logo-text">Firenze Knitwear <span class="logo-mg-text">Madagascar</span></span>
+        </div>
+      </a>
+      <button class="burger" id="burger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </header>
+
+    <!-- DROPDOWN MENU -->
+    <nav class="dropdown-menu" id="navMenu">
+      <div class="menu-section">
+        <a href="about.html" class="menu-link">
+          <h4>ABOUT</h4>
+          <img src="images/About.jpg" alt="About" class="menu-image" />
+        </a>
+      </div>
+      <div class="menu-section">
+        <a href="products.html" class="menu-link">
+          <h4>PRODUCTS</h4>
+          <img src="images/Products.jpg" alt="Products" class="menu-image" />
+        </a>
+      </div>
+      <div class="menu-section">
+        <a href="sustainability.html" class="menu-link">
+          <h4>SUSTAINABILITY</h4>
+          <img src="images/Sustainability-alt.jpg" alt="Sustainability" class="menu-image" />
+        </a>
+      </div>
+      <div class="menu-section">
+        <a href="contact.html" class="menu-link">
+          <h4>CONTACT</h4>
+          <img src="images/Contact.jpg" alt="Contact" class="menu-image" />
+        </a>
+      </div>
+    </nav>
+
+    <style>
+      .sust-hero-img {
+        width: 100%; height: 50vh; object-fit: cover; display: block;
+      }
+      .sust-hero-title {
+        width: 100%; background: #eaf7ef; text-align: center; padding: 2.5rem 1rem 2rem 1rem;
+      }
+      .sust-hero-title h1 {
+        font-family: 'Playfair Display', serif; font-size: 2.7rem; color: #014F30; margin-bottom: 0.5rem;
+      }
+      .sust-hero-title .hero-subtitle {
+        color: #7d5a4f; font-size: 1.25rem; font-family: 'Libre Baskerville', serif;
+      }
+
+      .sust-intro { background: #f6f6f2; padding: 3rem 2rem; text-align: center; }
+      .sust-intro h2 { font-family: 'Playfair Display', serif; font-size: 2rem; color: #014F30; margin-bottom: 1rem; }
+      .sust-intro p { color: #7d5a4f; font-size: 1.1rem; max-width: 700px; margin: 0 auto; }
+
+      .sust-section {
+        display: flex; align-items: stretch; min-height: 340px; width: 100%;
+        background: #fff; margin: 0; padding: 0; border: none;
+      }
+      .sust-section.alt { background: #eaf7ef; }
+      .sust-section .sust-img { flex: 1 1 50%; min-width: 0; }
+      .sust-section .sust-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .sust-section .sust-text { flex: 1 1 50%; display: flex; flex-direction: column; justify-content: center; padding: 3rem 2.5rem; }
+      .sust-section .sust-text h3 { font-family: 'Playfair Display', serif; color: #014F30; font-size: 1.5rem; margin-bottom: 0.7rem; }
+      .sust-section .sust-text p { color: #7d5a4f; font-size: 1.08rem; margin-bottom: 0.7rem; }
+      .sust-section .sust-text ul { color: #014F30; font-size: 1rem; padding-left: 1.2em; }
+      .sust-section .sust-text li { margin-bottom: 0.4em; }
+
+      .sust-mindset { background: #014F30; color: #fff; text-align: center; padding: 3rem 2rem; }
+      .sust-mindset h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 1rem; }
+      .sust-mindset p { font-size: 1.08rem; margin-bottom: 0.7rem; }
+      .sust-mindset strong { color: #eaf7ef; font-size: 1.15rem; }
+
+      @media (max-width: 900px) {
+        .sust-hero-img { height: 32vh; }
+        .sust-hero-title h1 { font-size: 2rem; }
+        .sust-hero { flex-direction: column; height: 45vh; }
+        .sust-hero-img, .sust-hero-content { width: 100%; height: 50%; }
+        .sust-hero-content { align-items: center; text-align: center; padding: 1.5rem 1rem; }
+        .sust-hero-content h1 { font-size: 2.1rem; }
+      }
+      @media (max-width: 700px) {
+        .sust-section { flex-direction: column; min-height: unset; }
+        .sust-section .sust-img, .sust-section .sust-text { width: 100%; padding: 1.2rem 1rem; }
+        .sust-section .sust-img { order: -1; height: 220px; }
+        .sust-section .sust-img img { height: 100%; }
+      }
+    </style>
+
+    <!-- HERO -->
+    <img src="images/Sustainability.jpg" alt="Sustainability at Firenze Knitwear" class="sust-hero-img">
+    <div class="sust-hero-title">
+      <h1>Sustainability</h1>
+      <p class="hero-subtitle">Responsibility in Every Stitch</p>
+    </div>
+
+    <!-- INTRO -->
+    <section class="sust-intro">
+      <h2>At Firenze Knitwear, sustainability is not a label — it's a way of working.</h2>
+      <p>From the ground up in Madagascar, we’re committed to protecting our environment, empowering our people, and contributing positively to our community and the global fashion ecosystem.</p>
+    </section>
+
+    <!-- Caring for the Environment -->
+    <section class="sust-section alt">
+      <div class="sust-img"><img src="images/olive-garden.jpg" alt="Caring for the Environment"></div>
+      <div class="sust-text">
+        <h3>Caring for the Environment</h3>
+        <p>We believe responsible production starts with small, consistent choices.</p>
+        <ul>
+          <li>Reduce material waste through efficient cutting and knitting methods</li>
+          <li>Reuse and recycle leftover yarn and off-cuts where possible</li>
+          <li>Prioritize low-impact yarns such as organic cotton and recycled blends</li>
+          <li>Explore local sourcing and packaging to reduce our carbon footprint</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Empowering People -->
+    <section class="sust-section">
+      <div class="sust-text">
+        <h3>Empowering People</h3>
+        <p>Our team is the heart of Firenze Knitwear.</p>
+        <ul>
+          <li>Equal opportunity hiring (50% women in our workforce)</li>
+          <li>Ongoing technical training and development</li>
+          <li>Safe, respectful, and inclusive working conditions</li>
+          <li>Internal growth and long-term employment</li>
+        </ul>
+      </div>
+      <div class="sust-img"><img src="images/woman-smiling.jpg" alt="Empowering People"></div>
+    </section>
+
+    <!-- Giving Back to Our Community -->
+    <section class="sust-section alt">
+      <div class="sust-img"><img src="images/landscape-mada.jpg" alt="Giving Back to Our Community"></div>
+      <div class="sust-text">
+        <h3>Giving Back to Our Community</h3>
+        <p>We are rooted in Madagascar, and we take that responsibility seriously.</p>
+        <ul>
+          <li>Donating excess garments and materials to local families and charities</li>
+          <li>Supporting school programs and training workshops</li>
+          <li>Encouraging small-scale outreach efforts with local partners</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Our Sustainability Mindset -->
+    <section class="sust-mindset">
+      <h3>Our Sustainability Mindset</h3>
+      <p>Sustainability for us is not about perfection — it’s about purpose.</p>
+      <p>Every thread, every team member, every garment we ship reflects our promise:</p>
+      <strong>To make knitwear with care — for people, planet, and progress.</strong>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2025 Firenze. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

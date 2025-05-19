@@ -1200,16 +1200,13 @@ body {
 
 .values-section {
   width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /* Remove extra horizontal scroll on small screens */
   overflow-x: hidden;
+  margin-left: -50vw;
+  left: 50%;
+  position: relative;
 }
 .values-cards {
   display: flex;
@@ -1237,8 +1234,9 @@ body {
   position: relative;
   z-index: 1;
   height: 600px;
-  /* Prevent text selection overflow */
   overflow: hidden;
+  word-break: break-word;
+  text-align: center;
 }
 .value-card span {
   font-family: 'Playfair Display', serif;
@@ -1248,9 +1246,11 @@ body {
   letter-spacing: 0.01em;
   text-transform: uppercase;
   text-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  white-space: nowrap;
+  white-space: normal;
   text-align: center;
   width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 .value-card:nth-child(1) {
   background: linear-gradient(135deg, #e53935 60%, #b71c1c 100%);
@@ -1279,6 +1279,7 @@ body {
   .value-card span {
     font-size: 1.2rem;
     white-space: normal;
+    word-break: break-word;
   }
 }
 
@@ -1287,6 +1288,7 @@ body {
     padding: 2.5rem 1rem;
     font-size: 1.2rem;
     height: 140px;
+    word-break: break-word;
   }
   .values-section, .values-cards {
     width: 100vw;
@@ -1306,13 +1308,16 @@ body {
   }
   .value-card {
     width: 100%;
+    box-sizing: border-box;
     border-radius: 0;
     padding: 2.2rem 0.7rem;
     height: 90px;
+    word-break: break-word;
   }
   .value-card span {
     font-size: 1.2rem;
     white-space: normal;
+    word-break: break-word;
   }
   .value-card:not(:last-child) {
     border-bottom: 2px solid rgba(255,255,255,0.12);
