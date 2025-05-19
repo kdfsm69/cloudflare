@@ -1199,13 +1199,14 @@ body {
 }
 
 .values-section {
-  box-sizing: border-box;
   width: 100vw;
-
   display: flex;
   flex-direction: row;
   justify-content: center;
   overflow-x: hidden;
+  margin-left: -50vw;
+  left: 50%;
+  position: relative;
 }
 .values-cards {
   display: flex;
@@ -1233,7 +1234,6 @@ body {
   position: relative;
   z-index: 1;
   height: 600px;
-  /* Prevent text selection overflow */
   overflow: hidden;
   word-break: break-word;
   text-align: center;
@@ -1308,6 +1308,7 @@ body {
   }
   .value-card {
     width: 100%;
+    box-sizing: border-box;
     border-radius: 0;
     padding: 2.2rem 0.7rem;
     height: 90px;
