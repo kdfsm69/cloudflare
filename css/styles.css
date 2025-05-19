@@ -1483,6 +1483,9 @@ body {
   .product-alt-text {
     order: 2 !important;
   }
+  .parallax {
+    background-attachment: unset;
+  }
 }
 
 /* Product Modal Styles */
