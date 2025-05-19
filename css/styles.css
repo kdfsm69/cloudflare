@@ -966,6 +966,14 @@ body {
     .carousel-caption p {
     font-size: 1rem;
     }
+
+    .fade-container h2 {
+        font-size: 1.2rem!important;
+    }
+
+    .fade-container a {
+        font-size: 0.8rem!important;
+    }
 }
 
 @media (max-width: 600px) {
@@ -1108,5 +1116,282 @@ body {
   }
   .contact-card img {
     max-width: 100%;
+  }
+}
+
+.modern-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin: 0 auto 2rem auto;
+  max-width: 950px;
+}
+
+.modern-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.07), 0 1.5px 6px rgba(125,90,79,0.04);
+  padding: 2.2rem 1.5rem 1.7rem 1.5rem;
+  text-align: left;
+  transition: transform 0.18s cubic-bezier(.4,2,.6,1), box-shadow 0.18s;
+  border: 1.5px solid #f2eae3;
+  position: relative;
+  overflow: hidden;
+}
+.modern-card:hover, .modern-card:focus {
+  transform: translateY(-7px) scale(1.03);
+  box-shadow: 0 12px 32px rgba(125,90,79,0.13), 0 2px 8px rgba(125,90,79,0.07);
+  z-index: 2;
+}
+.modern-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.18rem;
+  color: #7d5a4f;
+  margin-bottom: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.modern-card p {
+  font-size: 1.04rem;
+  color: #333;
+  line-height: 1.7;
+  margin: 0;
+  font-family: 'Libre Baskerville', serif;
+}
+@media (max-width: 600px) {
+  .modern-cards {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    padding: 0 0.2rem;
+  }
+  .modern-card {
+    padding: 1.3rem 1rem 1.1rem 1rem;
+  }
+  .modern-card h3 {
+    font-size: 1.05rem;
+  }
+  .modern-card p {
+    font-size: 0.97rem;
+  }
+}
+
+.values-section {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* Remove extra horizontal scroll on small screens */
+  overflow-x: hidden;
+}
+.values-cards {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  box-shadow: 0 6px 24px rgba(125,90,79,0.07), 0 1.5px 6px rgba(125,90,79,0.04);
+  border-radius: 0;
+  overflow: hidden;
+  margin: 0;
+  width: 100vw;
+  max-width: 100vw;
+}
+.value-card {
+  border-radius: 0;
+  box-shadow: none;
+  padding: 4.5rem 2.2rem;
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.18s cubic-bezier(.4,2,.6,1), box-shadow 0.18s;
+  border: none;
+  min-width: 0;
+  width: 33.3%;
+  position: relative;
+  z-index: 1;
+  height: 600px;
+  /* Prevent text selection overflow */
+  overflow: hidden;
+}
+.value-card span {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  white-space: nowrap;
+  text-align: center;
+  width: 100%;
+}
+.value-card:nth-child(1) {
+  background: linear-gradient(135deg, #e53935 60%, #b71c1c 100%);
+}
+.value-card:nth-child(2) {
+  background: linear-gradient(135deg, #f5f5f5 60%, #e0e0e0 100%);
+}
+.value-card:nth-child(3) {
+  background: linear-gradient(135deg, #43a047 60%, #1b5e20 100%);
+}
+.value-card span {
+  color: #fff;
+}
+.value-card:nth-child(2) span {
+  color: #7d5a4f;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.value-card:hover, .value-card:focus {
+  transform: scale(1.03);
+  z-index: 2;
+  box-shadow: 0 10px 28px rgba(125,90,79,0.13), 0 2px 8px rgba(125,90,79,0.07);
+}
+
+
+@media (max-width: 1400px) {
+  .value-card span {
+    font-size: 1.2rem;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 900px) {
+  .value-card {
+    padding: 2.5rem 1rem;
+    font-size: 1.2rem;
+    height: 140px;
+  }
+  .values-section, .values-cards {
+    width: 100vw;
+    max-width: 100vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .values-section {
+    width: 100vw;
+  }
+  .values-cards {
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(125,90,79,0.09);
+    width: 100vw;
+    max-width: 100vw;
+  }
+  .value-card {
+    width: 100%;
+    border-radius: 0;
+    padding: 2.2rem 0.7rem;
+    height: 90px;
+  }
+  .value-card span {
+    font-size: 1.2rem;
+    white-space: normal;
+  }
+  .value-card:not(:last-child) {
+    border-bottom: 2px solid rgba(255,255,255,0.12);
+  }
+}
+
+.what-defines-us {
+  width: 100vw;
+  margin-left: -50vw;
+  left: 50%;
+  position: relative;
+  background: #faf9f6;
+  padding: 0 0 2rem 0;
+}
+.what-defines-us h2 {
+  margin-top: 10rem;
+  margin-bottom: 3.5rem;
+}
+.wdu-row {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0 auto 0 auto;
+  padding: 0;
+  min-height: 50vh;
+  height: 70vh;
+  box-sizing: border-box;
+  position: relative;
+}
+.wdu-text {
+  flex: 1 1 50%;
+  max-width: 50vw;
+  min-width: 220px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 3vw;
+}
+.wdu-img {
+  flex: 1 1 50%;
+  max-width: 50vw;
+  min-width: 200px;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  z-index: 1;
+  overflow: hidden;
+  height: 100%;
+}
+.wdu-img img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0;
+  box-shadow: 0 6px 24px rgba(125,90,79,0.09), 0 1.5px 6px rgba(125,90,79,0.04);
+  background: #fff;
+  display: block;
+}
+@media (max-width: 1100px) {
+  .wdu-row.left-align .wdu-text, .wdu-row.right-align .wdu-text {
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+}
+@media (max-width: 900px) {
+  .wdu-row {
+    flex-direction: column;
+    min-height: 0;
+    height: auto;
+    padding: 2.5rem 0 2.5rem 0;
+    align-items: stretch;
+  }
+  .wdu-row .wdu-text, .wdu-row .wdu-img {
+    order: unset !important;
+    padding: 0 !important;
+    max-width: 95vw;
+    width: 100%;
+    text-align: center !important;
+    min-height: unset;
+  }
+  .wdu-img {
+    min-height: 180px;
+    max-width: 100vw;
+    height: 220px;
+  }
+  .wdu-img img {
+    max-width: 100vw;
+    min-height: 180px;
+    height: 220px;
+    border-radius: 14px;
+    margin-bottom: 1.2rem;
+  }
+  .wdu-text h3 {
+    font-size: 1.3rem;
+  }
+  .wdu-text p {
+    font-size: 1rem;
   }
 }

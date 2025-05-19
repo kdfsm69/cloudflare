@@ -57,62 +57,71 @@
             <img src="images/contact-hero.jpg" alt="Contact Firenze" class="contact-hero-img" />
         </section>
 
-        <section class="contact-form-section" style="background:#f8f4f1;padding:3.5rem 1.5rem 2.5rem 1.5rem;max-width:1400px;width:96vw;margin:0 auto 2.5rem auto;border-radius:18px;box-shadow:0 4px 24px rgba(0,0,0,0.07);">
-            <div style="max-width:900px;margin:0 auto 2.5rem auto;text-align:center;">
-                <h1 style="font-family:'Playfair Display',serif;font-size:2.8rem;color:#1a1a1a;margin-bottom:0.7rem;letter-spacing:1px;">CONTACT US</h1>
-                <div style="font-family:'Playfair Display',serif;font-size:1.35rem;font-style:italic;color:#7d5a4f;margin-bottom:1.1rem;">Let’s Shape Something Exceptional Together</div>
-                <div style="font-size:1.13rem;color:#4a4a4a;margin-bottom:2.5rem;max-width:700px;margin-left:auto;margin-right:auto;">Whether you’re a fashion label, sourcing agent, or creative studio, we’re ready to support your knitwear journey—from concept to final garment.</div>
-            </div>
-            <div style="display:flex;flex-wrap:wrap;gap:3.5rem;align-items:stretch;justify-content:center;">
-                <div style="flex:1 1 420px;min-width:340px;max-width:500px;display:flex;flex-direction:column;justify-content:center;background:#fff;border-radius:14px;box-shadow:0 2px 8px rgba(0,0,0,0.04);padding:2.2rem 2rem 2.2rem 2rem;">
-                    <h2 style="font-family:'Playfair Display',serif;font-size:1.5rem;color:#7d5a4f;margin-bottom:1.3rem;text-align:left;">Get in Touch</h2>
-                    <form action="mailto:sales@firenzeknitwear.com" method="POST" enctype="text/plain" class="contact-form" style="width:100%;">
-                        <div class="form-group" style="margin-bottom:1.1rem;">
-                            <label for="name" style="font-weight:500;margin-bottom:0.3rem;display:block;">Name</label>
-                            <input type="text" name="name" id="name" placeholder="Your Name" required />
-                        </div>
-                        <div class="form-group" style="margin-bottom:1.1rem;">
-                            <label for="company" style="font-weight:500;margin-bottom:0.3rem;display:block;">Company / Brand</label>
-                            <input type="text" name="company" id="company" placeholder="Company / Brand" />
-                        </div>
-                        <div class="form-group" style="margin-bottom:1.1rem;">
-                            <label for="email" style="font-weight:500;margin-bottom:0.3rem;display:block;">Email</label>
-                            <input type="email" name="email" id="email" placeholder="Email" required />
-                        </div>
-                        <div class="form-group" style="margin-bottom:1.1rem;">
-                            <label for="country" style="font-weight:500;margin-bottom:0.3rem;display:block;">Country</label>
-                            <input type="text" name="country" id="country" placeholder="Country" />
-                        </div>
-                        <div class="form-group" style="margin-bottom:1.1rem;">
-                            <label for="message" style="font-weight:500;margin-bottom:0.3rem;display:block;">Message</label>
-                            <textarea name="message" id="message" rows="5" placeholder="Message" required></textarea>
-                        </div>
-                        <div class="form-group" style="margin-bottom:1.3rem;">
-                            <label for="attachment" style="font-weight:500;margin-bottom:0.3rem;display:block;">Attachment (optional)</label>
-                            <input type="file" name="attachment" id="attachment" style="font-size:0.95rem;" />
-                        </div>
-                        <button type="submit" class="submit-btn" style="background:#7d5a4f;color:#fff;font-size:1.1rem;letter-spacing:1px;padding:0.8rem 0;border-radius:6px;width:100%;margin-top:0.5rem;">SEND INQUIRY</button>
-                    </form>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="contact-form-section">
+            <div class="contact-intro">
+                <h1>CONTACT US</h1>
+                <div class="subheading">Let’s Shape Something Exceptional Together</div>
+                <div class="description">
+                Whether you’re a fashion label, sourcing agent, or creative studio, we’re ready to support
+                your knitwear journey—from concept to final garment.
                 </div>
-                <div style="flex:1 1 420px;min-width:340px;max-width:500px;display:flex;flex-direction:column;gap:2.2rem;align-items:center;justify-content:center;">
-                    <div style="background:#fff;border-radius:14px;box-shadow:0 2px 8px rgba(0,0,0,0.04);padding:2.2rem 2rem;width:100%;margin-bottom:1.2rem;">
-                        <div style="display:flex;flex-direction:column;gap:1.1rem;">
-                            <div style="display:flex;align-items:center;gap:0.7rem;font-size:1.08rem;color:#1a1a1a;"><i class="fa-regular fa-envelope" style="color:#7d5a4f;font-size:1.2rem;"></i> contact@firenzeknitwear.com</div>
-                            <div style="display:flex;align-items:center;gap:0.7rem;font-size:1.08rem;color:#1a1a1a;"><i class="fa-solid fa-phone" style="color:#7d5a4f;font-size:1.1rem;"></i> +261 XX XXX XXX</div>
-                            <div style="display:flex;align-items:center;gap:0.7rem;font-size:1.08rem;color:#1a1a1a;"><i class="fa-solid fa-location-dot" style="color:#7d5a4f;font-size:1.1rem;"></i> Antananarivo, Madagascar</div>
-                            <div style="display:flex;align-items:center;gap:0.7rem;font-size:1.08rem;color:#1a1a1a;"><i class="fa-regular fa-clock" style="color:#7d5a4f;font-size:1.1rem;"></i> Monday–Friday, 9am–5pm (EAT)</div>
-                        </div>
+            </div>
+
+            <div class="contact-content">
+                <!-- Form Column -->
+                <div class="contact-column contact-form-container">
+                <h2>Get in Touch</h2>
+                <form action="mailto:sales@firenzeknitwear.com" method="POST" enctype="text/plain" class="contact-form">
+                    <div class="form-group">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" placeholder="Your Name" required>
                     </div>
-                    <div style="background:#fff;border-radius:14px;box-shadow:0 2px 8px rgba(0,0,0,0.04);padding:2.2rem 2rem;width:100%;margin-top:1.2rem;">
-                        <div style="font-family:'Playfair Display',serif;font-size:1.25rem;color:#1a1a1a;margin-bottom:0.7rem;">BUSINESS INQUIRIES</div>
-                        <div style="font-size:1.05rem;color:#7d5a4f;margin-bottom:0.5rem;">For sourcing, partnerships, or product development</div>
-                        <div style="display:flex;align-items:center;gap:0.7rem;font-size:1.08rem;color:#1a1a1a;margin-bottom:0.4rem;"><i class="fa-regular fa-envelope" style="color:#7d5a4f;font-size:1.1rem;"></i> sales@firenzeknitwear.com</div>
-                        <div style="display:flex;align-items:center;gap:0.7rem;font-size:1.08rem;color:#1a1a1a;"><i class="fa-brands fa-whatsapp" style="color:#7d5a4f;font-size:1.1rem;"></i> WhatsApp-Business +261 XXX XXX XXX</div>
+                    <div class="form-group">
+                    <label for="company">Company / Brand</label>
+                    <input id="company" name="company" type="text" placeholder="Company / Brand">
                     </div>
-                    <div style="background:#fff;border-radius:14px;box-shadow:0 2px 8px rgba(0,0,0,0.04);padding:2.2rem 2rem;width:100%;margin-top:1.2rem;display:flex;flex-direction:column;align-items:center;">
-                        <div style="font-family:'Playfair Display',serif;font-size:1.25rem;color:#1a1a1a;margin-bottom:2rem;">OUR GLOBAL FOOTPRINT</div>
-                        <img src="images/world-map.png" alt="Global Footprint" style="width:100%;border-radius:10px;margin-bottom:0.5rem;" />
+                    <div class="form-group">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="Email" required>
                     </div>
+                    <div class="form-group">
+                    <label for="country">Country</label>
+                    <input id="country" name="country" type="text" placeholder="Country">
+                    </div>
+                    <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
+                    </div>
+                    <div class="form-group">
+                    <label for="attachment">Attachment (optional)</label>
+                    <input id="attachment" name="attachment" type="file">
+                    </div>
+                    <button type="submit" class="submit-btn">SEND INQUIRY</button>
+                </form>
+                </div>
+
+                <!-- Info Column -->
+                <div class="contact-column contact-info-container">
+                <div class="contact-card">
+                    <div class="info-item"><i class="fa-regular fa-envelope"></i> contact@firenzeknitwear.com</div>
+                    <div class="info-item"><i class="fa-solid fa-phone"></i> +261 XX XXX XXX</div>
+                    <div class="info-item"><i class="fa-solid fa-location-dot"></i> Antananarivo, Madagascar</div>
+                    <div class="info-item"><i class="fa-regular fa-clock"></i> Monday–Friday, 9 am–5 pm (EAT)</div>
+                </div>
+
+                <div class="contact-card">
+                    <div style="font-family:'Playfair Display',serif;font-size:1.25rem;color:#1a1a1a;margin-bottom:0.7rem;">BUSINESS INQUIRIES</div>
+                    <div style="font-size:1.05rem;color:#7d5a4f;margin-bottom:0.5rem;">For sourcing, partnerships, or product development</div>
+                    <div class="info-item"><i class="fa-regular fa-envelope"></i> sales@firenzeknitwear.com</div>
+                    <div class="info-item"><i class="fa-brands fa-whatsapp"></i> WhatsApp-Business +261 XXX XXX XXX</div>
+                </div>
+
+                <div class="contact-card">
+                    <div style="font-family:'Playfair Display',serif;font-size:1.25rem;color:#1a1a1a;margin-bottom:2rem;">OUR GLOBAL FOOTPRINT</div>
+                    <img src="images/world-map.png" alt="Global Footprint">
+                </div>
                 </div>
             </div>
         </section>
