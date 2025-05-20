@@ -5,8 +5,121 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Firenze</title>
-    <link rel="stylesheet" href="css/styles.css?v=1.6.9" />
+    <link rel="stylesheet" href="css/styles.css?v=1.7.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+/***** Modern Defines Section (What Defines Us) *****/
+.modern-defines-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.modern-defines-row {
+  display: flex;
+  align-items: stretch;
+  min-height: 320px;
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 16px 0 rgba(60,40,30,0.07);
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+  margin-bottom: 0;
+}
+.modern-defines-row:hover {
+  box-shadow: 0 4px 32px 0 rgba(60,40,30,0.13);
+}
+.modern-defines-row.left-align .modern-defines-img { order: 0; }
+.modern-defines-row.left-align .modern-defines-points { order: 1; }
+.modern-defines-row.right-align .modern-defines-img { order: 1; }
+.modern-defines-row.right-align .modern-defines-points { order: 0; }
+.modern-defines-img {
+  flex: 1 1 50%;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f3f0;
+}
+.modern-defines-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 220px;
+  max-height: 340px;
+  border-radius: 0;
+  box-shadow: 0 2px 12px rgba(60,40,30,0.07);
+}
+.modern-defines-points {
+  flex: 1 1 50%;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 2rem;
+  background: #fff;
+}
+.modern-defines-points ul {
+  list-style: disc inside;
+  margin: 0;
+  padding: 0;
+  font-size: 1.18rem;
+  color: #4a3a2a;
+  font-family: 'Inter',sans-serif;
+  font-weight: 500;
+  line-height: 2.1;
+  text-align: left;
+}
+@media (max-width: 900px) {
+  .modern-defines-row {
+    flex-direction: column;
+    min-height: unset;
+  }
+  .modern-defines-img, .modern-defines-points {
+    flex: unset;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    padding: 0;
+  }
+  .modern-defines-row .modern-defines-img {
+    order: 0 !important;
+  }
+  .modern-defines-row .modern-defines-points {
+    order: 1 !important;
+    padding: 2rem 1.2rem;
+  }
+  .modern-defines-img img {
+    min-height: 160px;
+    max-height: 220px;
+  }
+}
+.sust-bg-parent {
+  position: relative;
+  overflow: hidden;
+}
+.sust-bg-parent::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: url('images/green-trees.jpg') center center/cover no-repeat;
+  filter: blur(8px) brightness(0.7);
+  opacity: 0.85;
+  pointer-events: none;
+}
+.sust-bg-parent::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(1,40,20,0.38);
+  pointer-events: none;
+}
+.sust-bg-parent > div {
+  position: relative;
+  z-index: 2;
+}
+</style>
 </head>
 
 <body>
@@ -15,7 +128,7 @@
             <a href="index.html" class="home-link">
                 <div class="logo">
                     <img src="images/logo-alt.png" alt="Firenze Logo" class="logo-img" />
-                    <span class="logo-text">Firenze Knitwear <span class="logo-mg-text">Madagascar</span></span>
+                    <span class="logo-text">Firenze Knitwear Madagascar</span>
                 </div>
             </a>
             <button class="burger" id="burger">
@@ -88,49 +201,51 @@
           </div>
         </section>
 
-        <section class="fade-container"
-                style="width:100%; padding:4rem 2rem; box-sizing:border-box;">
-            <div style="max-width:1100px; margin:0 auto; text-align:center;">
-                <h2 class="animate-fade-up" style="color:#7d5a4f; font-size:2rem; font-family:'Playfair Display',serif; margin-bottom:2.5rem;">What Defines Us</h2>
-                <div class="modern-cards animate-fade-up">
-                  <div class="modern-card">
-                    <h3>Full-Cycle Production</h3>
-                    <p>Everything in-house: sampling, knitting, finishing, packaging.</p>
-                  </div>
-                  <div class="modern-card">
-                    <h3>Knitwear Range</h3>
-                    <p>From lightweight sweaters to warm pullovers.</p>
-                  </div>
-                  <div class="modern-card">
-                    <h3>Accessories</h3>
-                    <p>Scarves, beanies & custom add-ons.</p>
-                  </div>
-                  <div class="modern-card">
-                    <h3>Global Reach</h3>
-                    <p>Duty-free access to Europe, USA, Canada, Japan & South Africa.</p>
-                  </div>
-                  <div class="modern-card">
-                    <h3>Versatile Machinery</h3>
-                    <p>Multiple gauges, yarn types & textures.</p>
-                  </div>
-                  <div class="modern-card">
-                    <h3>Inclusive Team</h3>
-                    <p>50% women, empowering local talent.</p>
-                  </div>
-                  <div class="modern-card">
-                    <h3>Process-Driven</h3>
-                    <p>SMV optimization & quality control at every step.</p>
-                  </div>
-                  <div class="modern-card">
-                    <h3>Sustainability</h3>
-                    <p>Ethical sourcing & environmental stewardship.</p>
-                  </div>
-                  <div class="modern-card">
-                    <h3>Innovation</h3>
-                    <p>3D-printed accessories & industrial engineering.</p>
-                  </div>
+        <section class="fade-container" style="width:100%; padding:4rem 2rem; box-sizing:border-box;">
+          <div style="max-width:1100px; margin:0 auto; text-align:center;">
+            <h2 class="animate-fade-up" style="color:#7d5a4f; font-size:2rem; font-family:'Playfair Display',serif; margin-bottom:2.5rem;">What Defines Us</h2>
+            <div class="modern-defines-section">
+              <!-- Section 1: Production & Range -->
+              <div class="modern-defines-row left-align">
+                <div class="modern-defines-img">
+                  <img src="images/factory.jpg" alt="Full-Cycle Production" />
                 </div>
+                <div class="modern-defines-points">
+                  <ul>
+                    <li>Full-Cycle Production</li>
+                    <li>Knitwear Range</li>
+                    <li>Accessories</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Section 2: People & Process -->
+              <div class="modern-defines-row right-align">
+                <div class="modern-defines-points">
+                  <ul>
+                    <li>Inclusive Team</li>
+                    <li>Process-Driven</li>
+                    <li>Quality Control</li>
+                  </ul>
+                </div>
+                <div class="modern-defines-img">
+                  <img src="images/woman-smiling.jpg" alt="Inclusive Team" />
+                </div>
+              </div>
+              <!-- Section 3: Innovation & Values -->
+              <div class="modern-defines-row left-align">
+                <div class="modern-defines-img">
+                  <img src="images/innovation.jpg" alt="Innovation" />
+                </div>
+                <div class="modern-defines-points">
+                  <ul>
+                    <li>Innovation</li>
+                    <li>Sustainability</li>
+                    <li>Client Collaboration</li>
+                  </ul>
+                </div>
+              </div>
             </div>
+          </div>
         </section>
 
         <!-- Products Section -->
@@ -155,8 +270,8 @@
         </section>
 
         <!-- Sustainability Section -->
-        <section id="sustainability" class="fade-container" style="width:100%; background:linear-gradient(90deg,#eaf7ef 60%,#f6f6f2 100%); padding:3.5rem 2rem 3rem 2rem; box-sizing:border-box; margin-bottom: 3rem;">
-          <div style="max-width:900px; margin:0 auto; text-align:center; background:#fff; border-radius:22px; box-shadow:0 6px 32px rgba(1,79,48,0.07); padding:3rem 2rem;">
+        <section id="sustainability" class="fade-container sust-bg-parent" style="width:100%; padding:4rem 2rem 3rem 2rem; box-sizing:border-box; margin-bottom: 3rem;">
+          <div style="max-width:900px; margin:0 auto; text-align:center; background:#fff; border-radius:22px; box-shadow:0 6px 32px rgba(1,79,48,0.07); padding:3rem 2rem; position:relative; z-index:2;">
             <h2 class="animate-fade-up" style="font-family:'Playfair Display',serif; color:#014F30; font-size:2rem; margin-bottom:1.2rem;">Responsibility in Every Stitch</h2>
             <p class="animate-fade-up" style="color:#7d5a4f; font-size:1.15rem; margin-bottom:2.2rem; line-height:1.7;">At Firenze Knitwear, sustainability is knitted into everything we do — from reducing waste and using better materials to investing in people and giving back to our community.</p>
             <ul class="sust-list animate-fade-up" style="text-align:left; display:inline-block; margin:0 auto 2.2rem auto; padding:0; font-size:1.08rem; color:#014F30; font-family:'Libre Baskerville',serif; line-height:1.8;">
@@ -171,6 +286,7 @@
             <a href="sustainability.html" class="hero-button" style="margin-top:0.5rem; font-size:1.1rem; padding:0.8rem 2.2rem; background:#014F30; color:#fff; border-radius:7px; font-family:'Playfair Display',serif; text-decoration:none; font-weight:500; box-shadow:0 2px 8px rgba(1,79,48,0.08); transition:background 0.3s; letter-spacing:0.5px; display:inline-block;">Learn More</a>
           </div>
         </section>
+        
 
         <!-- Contact Section -->
         <section id="contact" class="contact-form-section">
@@ -233,7 +349,7 @@
         </div>
     </footer>
 
-    <script src="js/script.js?v=1.6.9"></script>
+    <script src="js/script.js?v=1.7.0"></script>
 
 </body>
 

@@ -143,3 +143,38 @@ document.querySelectorAll('.modal-carousel').forEach(carousel => {
 const style = document.createElement('style');
 style.innerHTML = 'body.modal-open { overflow: hidden !important; }';
 document.head.appendChild(style);
+// Firenze Gallery Carousel Logic
+const galleryImages = document.querySelectorAll('.gallery-image');
+const leftArrow = document.querySelector('.gallery-arrow-left');
+const rightArrow = document.querySelector('.gallery-arrow-right');
+let galleryIndex = 0;
+
+function showGalleryImage(idx) {
+  galleryImages.forEach((img, i) => {
+    img.classList.toggle('active', i === idx);
+  });
+}
+
+leftArrow && leftArrow.addEventListener('click', () => {
+  galleryIndex = (galleryIndex - 1 + galleryImages.length) % galleryImages.length;
+  showGalleryImage(galleryIndex);
+});
+rightArrow && rightArrow.addEventListener('click', () => {
+  galleryIndex = (galleryIndex + 1) % galleryImages.length;
+  showGalleryImage(galleryIndex);
+});
+// Optional: swipe support for mobile
+const galleryWrapper = document.querySelector('.gallery-image-wrapper');
+if (galleryWrapper) {
+  let startX = null;
+  galleryWrapper.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+  });
+  galleryWrapper.addEventListener('touchend', e => {
+    if (startX === null) return;
+    const endX = e.changedTouches[0].clientX;
+    if (endX - startX > 40) leftArrow.click();
+    else if (startX - endX > 40) rightArrow.click();
+    startX = null;
+  });
+}
